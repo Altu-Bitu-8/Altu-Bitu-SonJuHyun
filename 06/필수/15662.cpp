@@ -17,7 +17,8 @@ void rotate_wheel(int i, int d, vector<deque<int>>& wheel) {
 
 void rotate_wheels(int index, int d, vector<deque<int>>& wheel) {
     vector<int> dir(wheel.size(), 0);  
-    
+    dir[index] = d;
+
     // 왼쪽 톱니바퀴 
     for (int i = index; i > 0; --i) {
         if (wheel[i][6] != wheel[i - 1][2]) {
